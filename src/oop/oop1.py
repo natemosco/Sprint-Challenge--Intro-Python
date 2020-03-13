@@ -35,12 +35,12 @@ class Car(GroundVehicle):
         pass
 
 
-class Car(GroundVehicle):
+class Motorcycle(GroundVehicle):
     def __init__(self):
         pass
 
 
-class FlightVehicle:
+class FlightVehicle(Vehicle):
     def __init__(self):
         pass
 
