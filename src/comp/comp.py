@@ -75,7 +75,8 @@ e = []
 for person in humans:
     e.append(f"{person.name}-{person.age}")
 print(e)
-
+e1 = [f'{person.name}-{person.age}' for person in humans]
+print(e1)
 # Write a list comprehension that creates a list of tuples containing name and
 # age, for example ("David", 31), for everyone between the ages of 27 and 32,
 # inclusive.
@@ -85,7 +86,9 @@ for person in humans:
     if person.age >= 27 and person.age <= 32:
         f.append((person.name, person.age))
 print(f)
-
+f1 = [(person.name, person.age)
+      for person in humans if person.age >= 27 and person.age <= 32]
+print(f1)
 # Write a list comprehension that creates a list of new Humans like the old
 # list, except with all the names uppercase and the ages with 5 added to them.
 # The "humans" list should be unmodified.
@@ -96,7 +99,8 @@ for person in humans:
     new_age = person.age + 5
     g.append(Human(all_caps, new_age))
 print(g)
-#! print(humans) shows unmodified
+g1 = [Human(person.name.upper(), person.age + 5) for person in humans]
+print(g1)
 
 # Write a list comprehension that contains the square root of all the ages.
 print("Square root of ages:")
@@ -104,3 +108,5 @@ h = []
 for person in humans:
     h.append(math.sqrt(person.age))
 print(h)
+h1 = [math.sqrt(person.age) for person in humans]
+print(h1)
