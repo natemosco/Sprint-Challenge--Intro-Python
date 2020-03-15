@@ -33,6 +33,8 @@ for person in humans:
     if person.name[0] == "D":
         a.append(person.name)
 print(a)
+a1 = [person.name for person in humans if person.name[0] == "D"]
+print(a1)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
@@ -42,6 +44,8 @@ for person in humans:
     if person.name[-1] == "e":
         b.append(person.name)
 print(b)
+b1 = [person.name for person in humans if person.name[-1] == 'e']
+print(b1)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
@@ -51,6 +55,9 @@ for person in humans:
     if ord(person.name[0]) >= 67 and ord(person.name[0]) <= 71:
         c.append(person.name)
 print(c)
+c1 = [person.name for person in humans if ord(
+    person.name[0]) >= 67 and ord(person.name[0]) <= 71]
+print(c1)
 
 # Write a list comprehension that creates a list of all the ages plus 10.
 print("Ages plus 10:")
@@ -58,6 +65,8 @@ d = []
 for person in humans:
     d.append(person.age + 10)
 print(d)
+d1 = [person.age + 10 for person in humans]
+print(d1)
 
 # Write a list comprehension that creates a list of strings which are the name
 # joined to the age with a hyphen, for example "David-31", for all humans.
